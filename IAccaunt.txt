@@ -1,0 +1,5 @@
+ interface IAccaunt
+    {
+        public abstract bool PasswordCheker();
+        public abstract void ShowInfo();
+    }

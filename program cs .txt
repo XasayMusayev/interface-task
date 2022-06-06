@@ -1,0 +1,37 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            User user = new User
+            {
+                Fullname = "xasay",
+                Email = "xasaymusayev",
+                Password = "xasaHH22",
+                
+                
+                
+
+            };
+
+            UserName(user);
+            
+            
+            
+        }
+        static void UserName(IAccaunt accaunt)
+        {
+            
+            if(accaunt.PasswordCheker()== true)
+            {
+                Console.WriteLine("Hesab yaradildi");
+                accaunt.ShowInfo();
+            }
+            else
+            {
+                Console.WriteLine("sifreni yeniden daxil edin");
+            }
+            
+        }
+    
+    }
+}

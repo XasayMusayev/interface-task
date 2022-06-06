@@ -1,0 +1,40 @@
+class User : IAccaunt
+    {
+        public string Fullname { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+
+
+        public bool PasswordCheker()
+        {
+            if (Password.Length < 8) return false;
+
+            bool resultt = Password.ToUpper() != Password && Password.ToLower() != Password;
+
+
+            return resultt;
+
+            bool IsDigitIncluded = false;
+            foreach (var item in Password)
+            {
+                if (int.TryParse(item + "", out int result))
+                {
+                    IsDigitIncluded = true;
+                    break;
+                }
+
+            }
+            if (IsDigitIncluded == false) return false;
+
+
+            return true;
+
+
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine(Fullname);
+            Console.WriteLine(Email);
+
+        }
